@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="community">
+  <database-model serializer="dbm" rdbms="H2" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="COMMUNITY">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="INFORMATION_SCHEMA"/>
+    <schema id="4" parent="2" name="PUBLIC">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="5" parent="4" name="QUESTION"/>
+    <table id="6" parent="4" name="USER"/>
+    <column id="7" parent="5" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_6EA2455A_56BC_46D5_A56A_FE0625F90397)</DefaultExpression>
+    </column>
+    <column id="8" parent="5" name="TITLE">
+      <Position>2</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="9" parent="5" name="DESCRIPTION">
+      <Position>3</Position>
+      <DataType>CLOB(max)|2005</DataType>
+    </column>
+    <column id="10" parent="5" name="GMT_CREATE">
+      <Position>4</Position>
+      <DataType>BIGINT(19)|-5</DataType>
+    </column>
+    <column id="11" parent="5" name="GMT_MODIFIED">
+      <Position>5</Position>
+      <DataType>BIGINT(19)|-5</DataType>
+    </column>
+    <column id="12" parent="5" name="CREATOR">
+      <Position>6</Position>
+      <DataType>INTEGER(10)|4</DataType>
+    </column>
+    <column id="13" parent="5" name="COMMENT_COUNT">
+      <Position>7</Position>
+      <DataType>INTEGER(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="14" parent="5" name="VIEW_COUNT">
+      <Position>8</Position>
+      <DataType>INTEGER(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="15" parent="5" name="LIKE_COUNT">
+      <Position>9</Position>
+      <DataType>INTEGER(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="16" parent="5" name="TAG">
+      <Position>10</Position>
+      <DataType>VARCHAR(256)|12</DataType>
+    </column>
+    <key id="17" parent="5" name="CONSTRAINT_E">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="18" parent="6" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_0546B1A2_4FC1_4481_91EA_6E4148B33299)</DefaultExpression>
+    </column>
+    <column id="19" parent="6" name="ACCOUNT_ID">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="20" parent="6" name="NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="21" parent="6" name="TOKEN">
+      <Position>4</Position>
+      <DataType>CHAR(36)|1</DataType>
+    </column>
+    <column id="22" parent="6" name="GMT_CREATE">
+      <Position>5</Position>
+      <DataType>BIGINT(19)|-5</DataType>
+    </column>
+    <column id="23" parent="6" name="GMT_MODIFIED">
+      <Position>6</Position>
+      <DataType>BIGINT(19)|-5</DataType>
+    </column>
+    <column id="24" parent="6" name="BIO">
+      <Position>7</Position>
+      <DataType>VARCHAR(256)|12</DataType>
+    </column>
+    <column id="25" parent="6" name="AVATAR_URL">
+      <Position>8</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <key id="26" parent="6" name="CONSTRAINT_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
